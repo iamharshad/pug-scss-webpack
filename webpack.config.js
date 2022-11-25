@@ -14,6 +14,16 @@ module.exports = {
     type: 'filesystem',
   },
 
+  devServer:{
+    open:true,
+    port:3000,
+    static: {
+      directory: path.join(__dirname, 'src'),
+    },
+    compress: true,
+    hot:true
+  },
+  
   entry: {
     // don't define scripts and styles in the Webpack entry,
     // all scripts and styles must be specified in Pug
