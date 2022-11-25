@@ -2,12 +2,16 @@ const path = require('path');
 const PugPlugin = require('pug-plugin');
 
 module.exports = {
-    mode: 'none',
+  mode: 'none',
   output: {
     path: path.join(__dirname, 'dist/'),
     publicPath: '/',
     // output filename of JS files
     filename: 'assets/js/[name].[contenthash:8].js'
+  },
+
+  cache: {
+    type: 'filesystem',
   },
 
   entry: {
